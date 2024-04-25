@@ -11,6 +11,9 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage'
 import Navbar from './Pages/Navbar/Navbar';
 import Footer from './Pages/Footer/Footer';
 import AuthProvider from './Providers/AuthProvider';
+import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +28,19 @@ const router = createBrowserRouter([
         path: '/footer',
         element: <Footer></Footer>,
       },
+      {
+        path: '/',
+        element: <Home></Home>,
+      },
+      {
+        path: '/login',
+        element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
+      },
+      
     ]
   },
 ]);

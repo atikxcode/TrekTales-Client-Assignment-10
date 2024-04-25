@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-
+import './Navbar.css'
+import 'animate.css';
 
 const Navbar = () => {
 
@@ -20,13 +21,13 @@ const Navbar = () => {
   const navLinks = <>
   <li><NavLink to='/'>Home</NavLink></li>
   
-     <li><NavLink to='/updateprofile'>Update Profile</NavLink></li>
+     <li><NavLink to='/updateprofile'>All Tourists Spot</NavLink></li>
     
-  <li><NavLink to='/about'>About</NavLink></li>
+  <li><NavLink to='/about'>Add Tourists Spot</NavLink></li>
   {
     user && 
     <>
-    <li><NavLink to='/contact'>Contact</NavLink></li>
+    {/* <li><NavLink to='/contact'>Contact</NavLink></li> */}
     </>
   }
   
@@ -70,7 +71,8 @@ const Navbar = () => {
     {
       user ? 
       <button  className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700" onClick={handleSignOut}>Sign Out</button>
-      : <Link to='/login'><button className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700">Login</button></Link>
+      : <div className="flex gap-4"><Link to='/login'><button className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700">Login</button></Link> 
+      <Link to='/register'><button className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700">Register</button></Link></div>
     }
   </div>
 </div>
