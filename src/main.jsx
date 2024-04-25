@@ -14,6 +14,8 @@ import AuthProvider from './Providers/AuthProvider';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import AllTouristSpots from './Pages/AllTouristSpots/AllTouristSpots';
+import AddTouristsSpot from './Pages/AddTouristsSpot/AddTouristsSpot';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/alltouristspot',
+        element: <AllTouristSpots></AllTouristSpots>,
+      },
+      {
+        path: '/addtouristspot',
+        element: <AddTouristsSpot></AddTouristsSpot>,
       },
       
     ]

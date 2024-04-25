@@ -105,21 +105,21 @@ const Register = () => {
   <label className="label">
     <span className="text-white text-[20px] font-semibold">Your Name</span>
   </label>
-  <input type="text" placeholder="Enter your name" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-[#b95c47]" value={name} onChange={e => setName(e.target.value)} required />
+  <input type="text" placeholder="Enter your name" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" value={name} onChange={e => setName(e.target.value)} required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Photo URL</span>
   </label>
-  <input type="text" placeholder="Enter your photo URL" name="photo" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-[#b95c47]" value={photo} onChange={e => setPhoto(e.target.value)} required />
+  <input type="text" placeholder="Enter your photo URL" name="photo" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" value={photo} onChange={e => setPhoto(e.target.value)} required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Email address</span>
   </label>
-  <input type="email" placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-[#b95c47]" value={email} onChange={e => setEmail(e.target.value)} required />
+  <input type="email" placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" value={email} onChange={e => setEmail(e.target.value)} required />
 </div>
 
 <div className="form-control">
@@ -131,7 +131,7 @@ const Register = () => {
     type={showPassword ? 'text' : 'password'}
     placeholder="Enter your password"
      name="password" 
-     className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-[#b95c47] w-full"
+     className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400 w-full"
       value={password}
        onChange={e => setPassword(e.target.value)} required />
     <span className="absolute right-[2%] top-[30%] text-white" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
@@ -142,9 +142,9 @@ const Register = () => {
   </label>
 </div>
 <div className="form-control mt-6">
-  <button className="p-3 rounded-xl  text-white text-xl font-semibold bg-[#b95c47] hover:text-black hover:bg-white duration-700 ">Register</button>
+  <button className="p-3 rounded-xl  text-white text-xl font-semibold bg-gray-400 opacity-70 hover:text-black hover:bg-white duration-700 ">Register</button>
 </div>
-<p className="text-center mt-6 text-white font-semibold">Already Have An Account? <Link to='/login'><span className="text-[#F75B5F] text-[16px] font-semibold">Login</span></Link></p>
+<p className="text-center mt-6 text-gray-400 font-semibold">Already Have An Account? <Link to='/login'><span className="text-white text-[16px] font-semibold">Login</span></Link></p>
 </form>
     </div>
     </div>

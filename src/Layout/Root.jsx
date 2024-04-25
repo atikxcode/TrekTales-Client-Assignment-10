@@ -5,10 +5,10 @@ import Footer from "../Pages/Footer/Footer";
 
 const Root = () => {
   return (
-    <div>
-      <Navbar></Navbar>
+    <div className="font-nunito">
+     
       <Outlet></Outlet>
-      <Footer></Footer>
+      
     </div>
   );
 };

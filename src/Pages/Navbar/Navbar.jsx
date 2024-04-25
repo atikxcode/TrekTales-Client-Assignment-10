@@ -9,6 +9,7 @@ const Navbar = () => {
 
 
   const {user , logOut} = useContext(AuthContext);
+  
 
   const handleSignOut = () => {
     logOut()
@@ -21,19 +22,19 @@ const Navbar = () => {
   const navLinks = <>
   <li><NavLink to='/'>Home</NavLink></li>
   
-     <li><NavLink to='/updateprofile'>All Tourists Spot</NavLink></li>
+     <li><NavLink to='/alltouristspot'>All Tourists Spot</NavLink></li>
     
-  <li><NavLink to='/about'>Add Tourists Spot</NavLink></li>
+  <li><NavLink to='/addtouristspot'>Add Tourists Spot</NavLink></li>
   {
     user && 
     <>
-    {/* <li><NavLink to='/contact'>Contact</NavLink></li> */}
+    <li><NavLink to='/mylist'>My List</NavLink></li>
     </>
   }
   
   </>
   return (
-    <div className="pb-10 bg-[#1b1b1b] pt-10">
+    <div className="pb-10 pt-8" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
      <div className="container mx-auto ">
      <div className="navbar ">
   <div className="navbar-start">
@@ -46,7 +47,7 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <h2 className="font-bold text-2xl text-orange-400 animate__animated animate__backInLeft">Elite Shores Escapes</h2>
+    <h2 className="font-bold text-2xl text-orange-400 animate__animated animate__backInLeft">TrekTales</h2>
   </div>
   <div className="navbar-center hidden lg:flex">
   <ul className="menu menu-horizontal px-1 font-semibold text-white">
@@ -71,8 +72,8 @@ const Navbar = () => {
     {
       user ? 
       <button  className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700" onClick={handleSignOut}>Sign Out</button>
-      : <div className="flex gap-4"><Link to='/login'><button className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700">Login</button></Link> 
-      <Link to='/register'><button className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700">Register</button></Link></div>
+      : <div className="flex gap-4"><Link to='/login'><button className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700">Login</button></Link> 
+      <Link to='/register'><button className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700">Register</button></Link></div>
     }
   </div>
 </div>

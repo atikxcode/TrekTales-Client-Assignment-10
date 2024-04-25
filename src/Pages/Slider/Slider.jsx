@@ -28,14 +28,15 @@ const Slider = () => {
   },[])
   return (
     
-  <div className='  bg-[#1b1b1b]' >
-    <div className='container mx-auto p-4' data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+  <div className=' ' >
+    <div className='container mx-auto p-4' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
     <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
         pagination={{
-          type: 'fraction',
+          clickable: true,
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
         className="mySwiper"
       >
         <SwiperSlide><img className='img' src={image1} alt="" /></SwiperSlide>
