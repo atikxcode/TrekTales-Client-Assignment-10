@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import 'aos/dist/aos.css'
 import Aos from "aos";
 
@@ -38,7 +38,7 @@ useEffect(() => {
           <p className="font-extrabold">{touristSpot.country}</p>
           </div>
           <div className="p-8 items-center flex">
-          <button className="text-gray-400 hover:text-white hover:font-bold transition-all">View Details</button>
+         <Link to={`/viewdetails/${touristSpot._id}`}> <button className="text-gray-400 hover:text-white hover:font-bold transition-all">View Details</button></Link>
           </div>
          </div>
           
