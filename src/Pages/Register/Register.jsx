@@ -159,6 +159,7 @@ const Register = () => {
 <p className="text-center mt-6 text-gray-400 font-semibold">Already Have An Account? <Link to='/login'><span className="text-white text-[16px] font-semibold">Login</span></Link></p>
 </form>
     </div>
+    
     </div>
     </div>
 

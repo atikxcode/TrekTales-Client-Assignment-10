@@ -75,6 +75,7 @@ const Login = () => {
 
 
   return (
+    
     <div className=" bg-[#000000]">
       <div className=" mb-10" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
         <Navbar></Navbar>
@@ -135,6 +136,7 @@ const Login = () => {
       <ToastContainer />
   
     </div>
+    
   );
 };
 
