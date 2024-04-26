@@ -16,6 +16,7 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AllTouristSpots from './Pages/AllTouristSpots/AllTouristSpots';
 import AddTouristsSpot from './Pages/AddTouristsSpot/AddTouristsSpot';
+import TouristSpot from './Pages/TouristSpot/TouristSpot';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
         path: '/addtouristspot',
         element: <AddTouristsSpot></AddTouristsSpot>,
       },
+      
       
     ]
   },

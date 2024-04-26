@@ -1,5 +1,5 @@
 import 'animate.css';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,12 +7,22 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import './Register.css'
 import { Helmet } from 'react-helmet';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import 'aos/dist/aos.css'
+import Aos from "aos";
+
+
 const Register = () => {
 
   const isValidURL = (string) => {
     var res = string.match(/\bhttps?:\/\/\S+\.(jpeg|jpg|gif|png|bmp|svg|webp|tiff|ico)\b/i);
     return (res!== null)
   };
+
+  useEffect(() => {
+    Aos.init();
+  },[])
 
   
 
@@ -85,15 +95,17 @@ const Register = () => {
   }
 
   return (
-    <div className='pt-20 pb-10 md:pb-[220px] xl:pb-20 bg-[#1b1b1b] .page-container '>
-    
+    <div className='bg-[#000000]  .page-container '>
+    <div className='pb-10' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+      <Navbar></Navbar>
+
     <Helmet>
       <meta charSet="utf-8" />
       <title>Register - Elite Shores Escape</title>
 
       </Helmet>
     
-    <div className='animate__animated animate__lightSpeedInRight'>
+    <div className=''>
 
     <div>
     <h2 className="my-10 text-center text-white text-[35px] font-semibold">Register your account</h2>
@@ -147,6 +159,14 @@ const Register = () => {
 <p className="text-center mt-6 text-gray-400 font-semibold">Already Have An Account? <Link to='/login'><span className="text-white text-[16px] font-semibold">Login</span></Link></p>
 </form>
     </div>
+    </div>
+    </div>
+
+    
+      
+    
+    <div>
+      <Footer></Footer>
     </div>
 
 

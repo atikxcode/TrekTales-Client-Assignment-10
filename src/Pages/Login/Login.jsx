@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import 'animate.css';
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,8 +8,14 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import 'aos/dist/aos.css'
+import Aos from "aos";
 
 const Login = () => {
+
+  useEffect(() => {
+    Aos.init();
+  },[])
 
 
   const location = useLocation();
@@ -70,7 +76,7 @@ const Login = () => {
 
   return (
     <div className=" bg-[#000000]">
-      <div className=" mb-10">
+      <div className=" mb-10" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
         <Navbar></Navbar>
       <Helmet>
       <meta charSet="utf-8" />
@@ -78,7 +84,7 @@ const Login = () => {
 
       </Helmet>
       
-      <div className="animate__animated animate__flipInX">
+      <div className="">
         
       <div className="text-white">
       <h2 className="my-10 text-center text-white text-[35px] font-semibold">Login your account</h2>
