@@ -1,14 +1,17 @@
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import './AddTouristSpot.css'
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const countries = ['France', 'Italy', 'Spain', 'England', 'Netherlands', 'Switzerland']
 
 
+
 const AddTouristsSpot = () => {
 
+  const {user} = useContext(AuthContext)
 
   const [country, setCountry] = useState('');
 
@@ -24,17 +27,19 @@ const AddTouristsSpot = () => {
     const form = e.target;
     const image = form.image.value;
     const name = form.spot.value;
-    
+    const countries = country;
     const location = form.location.value;
     const short_description = form.description.value;
-    const average_cost = form.cost.value;
+    const cost = form.cost.value;
+    const average_cost = parseInt(cost);
     const seasonality = form.season.value;
     const travel_time = form.time.value;
-    const total_visitors_per_year = form.visit.value;
+    const visit = form.visit.value;
+    const total_visitors_per_year = parseInt(visit);
     const user_email = form.email.value;
     const user_name = form.name.value;
 
-    const newTourSpot = {image, name, country, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year, user_email, user_name};
+    const newTourSpot = {image, name, countries, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year, user_email, user_name};
     console.log(newTourSpot)
 
     fetch('http://localhost:5000/touristspot', {
@@ -47,6 +52,7 @@ const AddTouristsSpot = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      form.reset();
     })
     
   }
@@ -71,14 +77,14 @@ const AddTouristsSpot = () => {
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Image</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="image" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" placeholder="Enter image of Tourist spot" name="image" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Tourist Spot Name</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="spot" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" placeholder="Enter Tourist spot name" name="spot" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
@@ -89,12 +95,12 @@ const AddTouristsSpot = () => {
    onChange={handleInputChange} 
    value={country} 
      name="country"
-      className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400 menu"
+      className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400 menu2"
        required
         >
   {
     countries.map((country, index) => (
-      <option className="option" key={index} value={country}>{country}</option>
+      <option className="option2" key={index} value={country}>{country}</option>
     ))}
     </select>
     </div>
@@ -105,56 +111,56 @@ const AddTouristsSpot = () => {
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Location</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="location" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" placeholder="Enter Tourist Spot Location" name="location" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Short Description</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="description" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" placeholder="Give a short description" name="description" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Average Cost</span>
   </label>
-  <input type="number" placeholder="Enter your email address" name="cost" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="number" placeholder="Average cost " name="cost" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Seasonality</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="season" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" placeholder="Enter Seasonality" name="season" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Travel Time</span>
   </label>
-  <input type="number" placeholder="Enter your email address" name="time" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" placeholder="Travel Time" name="time" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Total Visitor Per Year</span>
   </label>
-  <input type="number" placeholder="Enter your email address" name="visit" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="number" placeholder="Enter total approximated visit per year" name="visit" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">User Email</span>
   </label>
-  <input type="email" placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="email" defaultValue={user.email} placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">User Name</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" defaultValue={user.displayName} placeholder="Enter your Name" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control mt-6">

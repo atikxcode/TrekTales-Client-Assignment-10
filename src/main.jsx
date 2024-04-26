@@ -18,6 +18,10 @@ import AllTouristSpots from './Pages/AllTouristSpots/AllTouristSpots';
 import AddTouristsSpot from './Pages/AddTouristsSpot/AddTouristsSpot';
 import TouristSpot from './Pages/TouristSpot/TouristSpot';
 import ViewDetails from './Pages/ViewDetails/ViewDetails';
+
+import FilteredTouristSpot from './Pages/FilteredTouristSpot/FilteredTouristSpot';
+import FilteredSpot from './Pages/FilteredTouristSpot/FilteredSpot';
+import Country from './Pages/Countries/Country';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,6 +60,23 @@ const router = createBrowserRouter([
         path: '/viewdetails/:id',
         element: <ViewDetails></ViewDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/touristspot/${params.id}`)
+      },
+      
+      {
+        path: '/country',
+        element: <Country></Country>,
+        
+        
+      },
+      {
+        path: '/filteredtouristspot',
+        element: <FilteredTouristSpot></FilteredTouristSpot>,
+        
+      },
+      {
+        path: '/filteredspot',
+        element: <FilteredSpot></FilteredSpot>,
+        
       },
       
       

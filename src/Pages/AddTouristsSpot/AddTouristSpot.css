@@ -1,15 +1,16 @@
-.menu {
+.menu2 {
   background: #000000;
   color:gray;
   
 }
 
-.options { 
+.options2 { 
   background: black;
   color:white;
+  padding:2px
 }
 
 
-.option:selected{
+.option2:selected{
   background:gray;
 }

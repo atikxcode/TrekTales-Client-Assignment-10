@@ -7,8 +7,10 @@ import { FaAngleRight } from "react-icons/fa";
 import 'aos/dist/aos.css'
 import Aos from "aos";
 import TouristSpot from '../TouristSpot/TouristSpot';
-import Countries from '../Countries/Countries';
 
+
+import { Link } from 'react-router-dom';
+import Country from '../Countries/Country';
 
 const Home = () => {
 
@@ -29,7 +31,8 @@ const Home = () => {
         <h2 className='text-[55px] w-[280px] font-bold leading-[80px] mb-4 mt-4'>Explore The world</h2>
         <p className='text-[16px] font-medium w-[500px]'>Live the trips exploring the world, discover paradises, islands, mountains and much more, get your trip now.</p>
         
-        <button className='bg-gray-400 bg-opacity-70 text-white py-3 px-4 flex items-center gap-2 mt-4 w-[180px] font-bold hover:bg-gray-600 duration-500'>
+       
+        <button className='bg-gray-400 bg-opacity-70 text-white py-3 px-4 flex items-center gap-2 mt-4 w-[180px]  font-bold hover:bg-gray-600 duration-500'>
         <span>Start Your Journey </span><span className='text-white'><FaAngleRight /></span>
       </button>
         
@@ -43,7 +46,8 @@ const Home = () => {
 
       <TouristSpot></TouristSpot>
 
-      <Countries></Countries>
+     
+      <Country></Country>
 
       
 
