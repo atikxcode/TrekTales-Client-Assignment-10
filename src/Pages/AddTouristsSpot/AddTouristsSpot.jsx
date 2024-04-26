@@ -153,14 +153,14 @@ const AddTouristsSpot = () => {
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">User Email</span>
   </label>
-  <input type="email" defaultValue={user.email} placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="email" defaultValue={user ? user.email : ''} placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control">
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">User Name</span>
   </label>
-  <input type="text" defaultValue={user.displayName} placeholder="Enter your Name" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
+  <input type="text" defaultValue={user ? user.displayName : ''} placeholder="Enter your Name" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
 <div className="form-control mt-6">

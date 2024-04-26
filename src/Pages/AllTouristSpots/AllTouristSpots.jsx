@@ -10,17 +10,25 @@ const AllTouristSpots = () => {
   useEffect(() => {
     Aos.init();
   },[])
+  const [sortOrder, setSortOrder] = useState('asc');
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:5000/touristspot')
     .then(res => res.json())
     .then(data => {
-     console.log(data)
-     setTouristSpots(data);
+      let sortedData = [...data].sort((a,b) => 
+    sortOrder === 'asc' ? a.average_cost - b.average_cost : b.average_cost - a.average_cost);
+    //  console.log(data)
+     setTouristSpots(sortedData);
     })
-  }, []);
+  }, [sortOrder]);
 
   const [touristSpots, setTouristSpots] = useState([]);
+
+
+
+
 
 
   return (
@@ -30,6 +38,26 @@ const AllTouristSpots = () => {
       <div className="text-white flex gap-8 flex-col items-center mx-auto container">
       <h2 className="text-5xl font-bold">Explore Our Top Tourist Spots</h2>
       <p className="text-[16px] text-gray-300 text-center w-1/2">Embark on an unforgettable journey through our curated selection of must-visit destinations. From iconic landmarks to hidden gems, discover the beauty and charm of each location, and create lasting memories with every adventure. Start planning your next getaway today!</p>
+      
+      <div className="mb-10 flex flex-col items-center">
+      <button onClick={() => setMenuOpen(!isMenuOpen)} className="bg-gray-400 p-4 text-xl font-bold w-[200px] bg-opacity-70 duration-700 hover:bg-white hover:text-black">Sort</button>
+
+{
+  isMenuOpen && (
+    <div className="flex flex-col   rounded-lg p-4 gap-2">
+      <div className="flex items-center justify-center ">
+      <button onClick={() => {setSortOrder('asc'); setMenuOpen(false);}} className="bg-gray-400 p-2 font-bold bg-opacity-70 duration-700 hover:bg-white hover:text-black">Ascending</button>
+      </div>
+     <div>
+     <button onClick={() => {setSortOrder('desc'); setMenuOpen(false);}} className="bg-gray-400 p-2 font-bold bg-opacity-70 duration-700 hover:bg-white hover:text-black">Descending</button>
+     </div>
+    </div>
+  )
+}
+
+      </div>
+
+
       <div className="grid grid-cols-3 gap-16">
       {
         touristSpots.map(touristSpot => <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" className="" key={touristSpot._id}>
