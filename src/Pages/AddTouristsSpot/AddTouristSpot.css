@@ -1,0 +1,15 @@
+.menu {
+  background: #000000;
+  color:gray;
+  
+}
+
+.options { 
+  background: black;
+  color:white;
+}
+
+
+.option:selected{
+  background:gray;
+}

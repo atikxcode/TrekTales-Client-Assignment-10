@@ -1,17 +1,30 @@
-import { Link } from "react-router-dom";
+
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { useState } from "react";
+import './AddTouristSpot.css'
+
+const countries = ['France', 'Italy', 'Spain', 'England', 'Netherlands', 'Switzerland']
 
 
 const AddTouristsSpot = () => {
 
+
+  const [country, setCountry] = useState('');
+
+  const handleInputChange = (event) => {
+    const input = event.target.value;
+    if(countries.includes(input)){
+      setCountry(input.charAt(0).toUpperCase() + input.slice(1));
+    }
+  };
 
   const handleAdd = e => {
     e.preventDefault();
     const form = e.target;
     const image = form.image.value;
     const name = form.spot.value;
-    const country = form.country.value;
+    
     const location = form.location.value;
     const short_description = form.description.value;
     const average_cost = form.cost.value;
@@ -37,6 +50,8 @@ const AddTouristsSpot = () => {
     })
     
   }
+
+  
 
 
   return (
@@ -70,8 +85,21 @@ const AddTouristsSpot = () => {
   <label className="label">
     <span className="text-white  text-[20px] font-semibold">Country</span>
   </label>
-  <input type="text" placeholder="Enter your email address" name="country" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
-</div>
+  <select
+   onChange={handleInputChange} 
+   value={country} 
+     name="country"
+      className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400 menu"
+       required
+        >
+  {
+    countries.map((country, index) => (
+      <option className="option" key={index} value={country}>{country}</option>
+    ))}
+    </select>
+    </div>
+  
+
 
 <div className="form-control">
   <label className="label">

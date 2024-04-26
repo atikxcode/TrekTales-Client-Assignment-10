@@ -7,6 +7,7 @@ import { FaAngleRight } from "react-icons/fa";
 import 'aos/dist/aos.css'
 import Aos from "aos";
 import TouristSpot from '../TouristSpot/TouristSpot';
+import Countries from '../Countries/Countries';
 
 
 const Home = () => {
@@ -41,6 +42,8 @@ const Home = () => {
 
 
       <TouristSpot></TouristSpot>
+
+      <Countries></Countries>
 
       
 

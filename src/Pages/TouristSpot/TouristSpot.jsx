@@ -46,7 +46,10 @@ useEffect(() => {
           </div>)
       }
       </div>
+      <div className="pt-4">
       <Link to={'/alltouristspot'}><button className="bg-gray-400 opacity-70 p-4  hover:bg-white hover:text-black font-bold transition-all">Show All</button></Link>
+
+      </div>
       </div>
    
     </div>
