@@ -25,12 +25,9 @@ const Navbar = () => {
      <li><NavLink to='/alltouristspot'>All Tourists Spot</NavLink></li>
     
   <li><NavLink to='/addtouristspot'>Add Tourists Spot</NavLink></li>
-  {
-    user && 
-    <>
+ 
     <li><NavLink to='/mylist'>My List</NavLink></li>
-    </>
-  }
+
   
   </>
   return (

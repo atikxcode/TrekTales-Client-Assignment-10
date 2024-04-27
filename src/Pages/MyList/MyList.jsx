@@ -56,7 +56,7 @@ useEffect(() => {
     </Helmet>
     <Navbar></Navbar>
     
-    <div className="my-10 mx-auto container">
+    <div className="py-16 mx-auto container">
 
       <div className="grid grid-cols-3 gap-4">
         {

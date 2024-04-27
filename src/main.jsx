@@ -24,6 +24,7 @@ import PrivateRoute from './Pages/PrivateRoutes/PrivateRoute';
 import PrivateRoute2 from './Pages/PrivateRoutes/PrivateRoute2';
 import MyList from './Pages/MyList/MyList';
 import CountryBasedFiltered from './Pages/FilteredTouristSpot/CountryBasedFiltered';
+import PrivateRoute3 from './Pages/PrivateRoutes/PrivateRoute3';
 
 
 
@@ -87,7 +88,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/mylist',
-        element: <MyList></MyList>,
+        element: <PrivateRoute3><MyList></MyList></PrivateRoute3>,
        
         
       },

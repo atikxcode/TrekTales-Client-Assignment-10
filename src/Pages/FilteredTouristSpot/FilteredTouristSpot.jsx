@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import CountryBasedFiltered from "./CountryBasedFiltered";
-
+import Navbar from "../Navbar/Navbar";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import Footer from "../Footer/Footer";
 
 const FilteredTouristSpot = () => {
 
@@ -10,7 +13,9 @@ const FilteredTouristSpot = () => {
   const {country} = location.state;
   console.log(country);
  
-
+  useEffect(() => {
+    Aos.init();
+  },[])
 
 
 
@@ -35,10 +40,19 @@ const FilteredTouristSpot = () => {
   },[country, allSpot])
 
   return (
-    <div>
-     {
+    <div className="bg-[#000000]">
+       <Navbar></Navbar>
+       <div className="my-10 mx-auto container">
+       <div className="grid grid-cols-3 gap-4">
+       {
       filteredSpot?.map(spot => <CountryBasedFiltered key={spot._id} spot={spot}></CountryBasedFiltered>)
-     }
+        }
+       </div>
+       </div>
+       
+       
+       <Footer></Footer>
+     
     </div>
   );
 };
