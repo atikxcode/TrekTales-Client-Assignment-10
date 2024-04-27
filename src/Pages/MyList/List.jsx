@@ -8,7 +8,8 @@ const List = ({lists}) => {
   return (
     <div className="bg-[#000000]">
 
-<div className="flex flex-col gap-6 bg-[#1b1b1b] w-[450px] h-auto hover:scale-105 transition-all" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+      <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+      <div className="flex flex-col gap-6 bg-[#1b1b1b] w-[450px] h-auto hover:scale-105 transition-all" >
         <div>
         <img className="w-[450px] h-[350px]" src={image} alt="" />
         </div>
@@ -25,11 +26,14 @@ const List = ({lists}) => {
           </div>
 
 
-        <div className="p-8 items-center flex">
+        <div className="p-8 justify-center flex flex-col gap-6">
          <Link to={`/viewdetails/${_id}`}> <button className="text-gray-400 hover:text-white hover:font-bold transition-all">View Details</button></Link>
+         <Link to={`/updatetourcard/${_id}`}> <button className="text-gray-400 hover:text-white hover:font-bold transition-all">Update Details</button></Link>
+         <Link to={`/viewdetails/${_id}`}> <button className="text-gray-400 hover:text-white hover:font-bold transition-all">Delate</button></Link>
           </div>
 
         </div>
+      </div>
       </div>
 
     </div>

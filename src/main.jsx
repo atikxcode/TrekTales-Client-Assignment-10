@@ -25,6 +25,7 @@ import PrivateRoute2 from './Pages/PrivateRoutes/PrivateRoute2';
 import MyList from './Pages/MyList/MyList';
 import CountryBasedFiltered from './Pages/FilteredTouristSpot/CountryBasedFiltered';
 import PrivateRoute3 from './Pages/PrivateRoutes/PrivateRoute3';
+import UpdateTourCard from './Pages/UpdateTourCard/UpdateTourCard';
 
 
 
@@ -98,6 +99,12 @@ const router = createBrowserRouter([
        
         
       },
+
+      {
+        path: '/updatetourcard/:id',
+        element: <UpdateTourCard></UpdateTourCard>,
+        loader: ({params}) => fetch(`http://localhost:5000/touristspot/${params.id}`)
+      }
       
       
     ]
