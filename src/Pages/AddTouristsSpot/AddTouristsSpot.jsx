@@ -4,12 +4,16 @@ import Footer from "../Footer/Footer";
 import { useContext, useState } from "react";
 import './AddTouristSpot.css'
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const countries = ['France', 'Italy', 'Spain', 'England', 'Netherlands', 'Switzerland']
 
 
 
 const AddTouristsSpot = () => {
+
+  const notify = () => toast("Thanks for adding new Tour-Spot for us.");
 
   const {user} = useContext(AuthContext)
 
@@ -52,6 +56,10 @@ const AddTouristsSpot = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      if(data.insertedId){
+         notify();
+      }
+      
       form.reset();
     })
     
@@ -175,7 +183,7 @@ const AddTouristsSpot = () => {
 
     <Footer></Footer>
 
-
+    <ToastContainer />
     </div>
   );
 };

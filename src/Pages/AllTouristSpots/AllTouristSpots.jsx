@@ -40,7 +40,7 @@ const AllTouristSpots = () => {
       <p className="text-[16px] text-gray-300 text-center w-1/2">Embark on an unforgettable journey through our curated selection of must-visit destinations. From iconic landmarks to hidden gems, discover the beauty and charm of each location, and create lasting memories with every adventure. Start planning your next getaway today!</p>
       
       <div className="mb-10 flex flex-col items-center">
-      <button onClick={() => setMenuOpen(!isMenuOpen)} className="bg-gray-400 p-4 text-xl font-bold w-[200px] bg-opacity-70 duration-700 hover:bg-white hover:text-black">Sort</button>
+      <button onClick={() => setMenuOpen(!isMenuOpen)} className="bg-gray-400 p-4 text-xl font-bold w-[180px] bg-opacity-70 duration-700 hover:bg-white hover:text-black">Sort</button>
 
 {
   isMenuOpen && (
@@ -68,7 +68,10 @@ const AllTouristSpots = () => {
 
          <div className="flex flex-col items-start p-8 bg-[#1b1b1b] opacity-70">
           <p className="text-lg mb-2">{touristSpot.name}</p>
-          <p className="font-extrabold">{touristSpot.country}</p>
+          <p className="font-extrabold">Cost:   <span className="text-[14px] text-gray-400">{touristSpot.average_cost}$</span></p>
+          <p className="font-extrabold">Visit:  <span className="text-[14px] text-gray-400">{touristSpot.total_visitors_per_year}</span> </p>
+          <p className="font-extrabold">Time:   <span className="text-[14px] text-gray-400">{touristSpot.travel_time}</span> </p>
+          <p className="font-extrabold">Season: <span className="text-[14px] text-gray-400">{touristSpot.seasonality}</span> </p>
           </div>
           <div className="p-8 items-center flex">
          <Link to={`/viewdetails/${touristSpot._id}`}> <button className="text-gray-400 hover:text-white hover:font-bold transition-all">View Details</button></Link>

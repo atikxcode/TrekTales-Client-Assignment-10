@@ -22,6 +22,7 @@ import ViewDetails from './Pages/ViewDetails/ViewDetails';
 import FilteredTouristSpot from './Pages/FilteredTouristSpot/FilteredTouristSpot';
 import FilteredSpot from './Pages/FilteredTouristSpot/FilteredSpot';
 import Country from './Pages/Countries/Country';
+import PrivateRoute from './Pages/PrivateRoutes/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addtouristspot',
-        element: <AddTouristsSpot></AddTouristsSpot>,
+        element: <PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>,
       },
       {
         path: '/viewdetails/:id',

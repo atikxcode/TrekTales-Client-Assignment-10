@@ -55,27 +55,30 @@ const Navbar = () => {
   {navLinks}
     </ul>
   </div>
+
+
+
   <div className="navbar-end gap-4">
   <div className="avatar">
     {user && (
        <div className="w-12 rounded-full ">
        <img src={user.photoURL}/>
-       <span className="tooltip">{user.displayName}</span> 
+       <span className="tooltip">
+        {user.displayName}
+        </span> 
      </div>
     )}
      
- 
-    
-  
-  
 </div>
     {
       user ? 
-      <button  className="btn bg-[#b95c47] border-0 text-white hover:text-black hover:bg-white duration-700" onClick={handleSignOut}>Sign Out</button>
+      <button  className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700" onClick={handleSignOut}>Sign Out</button>
       : <div className="flex gap-4"><Link to='/login'><button className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700">Login</button></Link> 
       <Link to='/register'><button className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700">Register</button></Link></div>
     }
   </div>
+
+
 </div>
      </div>
     </div>
