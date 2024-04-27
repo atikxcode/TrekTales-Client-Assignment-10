@@ -81,7 +81,7 @@ const Login = () => {
         <Navbar></Navbar>
       <Helmet>
       <meta charSet="utf-8" />
-      <title>Login - Elite Shores Escape</title>
+      <title>Login - TrekTales</title>
 
       </Helmet>
       

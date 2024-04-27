@@ -1,17 +1,24 @@
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import './AddTouristSpot.css'
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import 'aos/dist/aos.css'
+import Aos from "aos";
+import { Helmet } from "react-helmet";
 const countries = ['France', 'Italy', 'Spain', 'England', 'Netherlands', 'Switzerland']
 
 
 
 const AddTouristsSpot = () => {
+
+  useEffect(() => {
+    Aos.init();
+  },[])
+
 
   const notify = () => toast("Thanks for adding new Tour-Spot for us.");
 
@@ -31,7 +38,7 @@ const AddTouristsSpot = () => {
     const form = e.target;
     const image = form.image.value;
     const name = form.spot.value;
-    const countries = country;
+    const country = country;
     const location = form.location.value;
     const short_description = form.description.value;
     const cost = form.cost.value;
@@ -43,7 +50,7 @@ const AddTouristsSpot = () => {
     const user_email = form.email.value;
     const user_name = form.name.value;
 
-    const newTourSpot = {image, name, countries, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year, user_email, user_name};
+    const newTourSpot = {image, name, country: country, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year, user_email, user_name};
     console.log(newTourSpot)
 
     fetch('http://localhost:5000/touristspot', {
@@ -70,11 +77,16 @@ const AddTouristsSpot = () => {
 
   return (
     <div className="bg-[#000000]">
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>Add Tourist Spot - TrekTales</title>
+
+      </Helmet>
 
       <Navbar></Navbar>
 
 
-      <div className="py-16">
+      <div className="py-16" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
     <h2 className="my-10 text-center text-white text-[35px] font-semibold">Add Your Tourist Spot</h2>
     
 

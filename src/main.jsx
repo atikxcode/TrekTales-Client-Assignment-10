@@ -22,6 +22,8 @@ import FilteredSpot from './Pages/FilteredTouristSpot/FilteredSpot';
 import Country from './Pages/Countries/Country';
 import PrivateRoute from './Pages/PrivateRoutes/PrivateRoute';
 import PrivateRoute2 from './Pages/PrivateRoutes/PrivateRoute2';
+import MyList from './Pages/MyList/MyList';
+import CountryBasedFiltered from './Pages/FilteredTouristSpot/CountryBasedFiltered';
 
 
 
@@ -76,10 +78,23 @@ const router = createBrowserRouter([
         path: '/filteredtouristspot',
         element: <FilteredTouristSpot></FilteredTouristSpot>,
         
+        
       },
       {
         path: '/filteredspot',
         element: <FilteredSpot></FilteredSpot>,
+        
+      },
+      {
+        path: '/mylist',
+        element: <MyList></MyList>,
+       
+        
+      },
+      {
+        path: '/countrybasedfiltered',
+        element: <CountryBasedFiltered></CountryBasedFiltered>,
+       
         
       },
       

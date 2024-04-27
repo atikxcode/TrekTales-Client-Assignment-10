@@ -11,6 +11,7 @@ import TouristSpot from '../TouristSpot/TouristSpot';
 
 import { Link } from 'react-router-dom';
 import Country from '../Countries/Country';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
 
@@ -20,6 +21,11 @@ const Home = () => {
 
   return (
     <div className='bg-[#000000]'>
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>Home - TrekTales</title>
+
+      </Helmet>
       <div className='absolute  w-full h-full '>
       
       <div className='relative h-full w-full' style={{backgroundImage:`url(${homeimg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
@@ -32,9 +38,9 @@ const Home = () => {
         <p className='text-[16px] font-medium w-[500px]'>Live the trips exploring the world, discover paradises, islands, mountains and much more, get your trip now.</p>
         
        
-        <button className='bg-gray-400 bg-opacity-70 text-white py-3 px-4 flex items-center gap-2 mt-4 w-[180px]  font-bold hover:bg-gray-600 duration-500'>
+        <Link to={'/alltouristspot'}><button className='bg-gray-400 bg-opacity-70 text-white py-3 px-4 flex items-center gap-2 mt-4 w-[180px]  font-bold hover:bg-gray-600 duration-500 absolute'>
         <span>Start Your Journey </span><span className='text-white'><FaAngleRight /></span>
-      </button>
+      </button></Link>
         
        
         </div>

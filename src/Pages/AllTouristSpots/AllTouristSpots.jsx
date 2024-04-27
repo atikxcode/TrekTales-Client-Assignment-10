@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { Helmet } from "react-helmet";
 
 
 const AllTouristSpots = () => {
@@ -33,6 +34,11 @@ const AllTouristSpots = () => {
 
   return (
     <div className="bg-[#000000] " >
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>All Tourist Spot - TrekTales</title>
+
+      </Helmet>
       <Navbar></Navbar>
       <div className="py-16  mx-auto container">
       <div className="text-white flex gap-8 flex-col items-center mx-auto container">

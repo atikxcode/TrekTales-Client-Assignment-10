@@ -101,7 +101,7 @@ const Register = () => {
 
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Register - Elite Shores Escape</title>
+      <title>Register - TrekTales</title>
 
       </Helmet>
     
