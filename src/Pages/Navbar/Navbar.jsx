@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import './Navbar.css'
@@ -6,7 +6,7 @@ import 'animate.css';
 
 const Navbar = () => {
 
-
+ 
 
   const {user , logOut} = useContext(AuthContext);
   
@@ -73,6 +73,7 @@ const Navbar = () => {
       : <div className="flex gap-4"><Link to='/login'><button className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700">Login</button></Link> 
       <Link to='/register'><button className="btn bg-gray-400 bg-opacity-70  border-0 text-white hover:text-black hover:bg-white duration-700">Register</button></Link></div>
     }
+    
   </div>
 
 

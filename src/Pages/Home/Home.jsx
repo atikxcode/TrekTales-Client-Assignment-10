@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from '../Slider/Slider';
 import homeimg from '../../assets/home-bg.jpg'
 import NavBar from '../Navbar/Navbar'
@@ -15,6 +15,9 @@ import { Helmet } from 'react-helmet';
 
 const Home = () => {
 
+
+
+
   useEffect(() => {
     Aos.init();
   },[])
@@ -29,8 +32,13 @@ const Home = () => {
       <div className='absolute  w-full h-full '>
       
       <div className='relative h-full w-full' style={{backgroundImage:`url(${homeimg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
-      <div className=' w-full top-0'>
-      <NavBar></NavBar>
+      
+      <div className=' w-full top-0 flex items-center'>
+      
+      <div className='flex-1'><NavBar></NavBar></div>
+      
+    
+      
       </div>
         <div  className=' pl-[200px] pt-6 pb-10 pr-10 text-white flex flex-col ' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
         <h2 className='text-2xl font-medium'>Welcome To TrekTales</h2>

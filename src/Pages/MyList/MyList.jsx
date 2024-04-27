@@ -56,11 +56,11 @@ useEffect(() => {
     </Helmet>
     <Navbar></Navbar>
     
-    <div className="py-16 mx-auto container">
+    <div className="py-32 mx-auto container">
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-16">
         {
-          myList.map(lists => <List key={lists._id} lists={lists}></List>)
+          myList.map(lists => <List key={lists._id} lists={lists} setMyList = {setMyList}></List>)
         }
       </div>
 
