@@ -19,20 +19,20 @@ const ViewDetails = () => {
 
       </Helmet>
       <Navbar></Navbar>
-      <div className=" py-36 container mx-auto">
+      <div className="py-[100px] md:py-[300px] lg:py-[300px] xl:py-[300px] container mx-auto">
       
 
-      <div className="flex bg-[#1b1b1b] ">
+      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row bg-[#1b1b1b] ">
 
         <div>
-        <img className="w-[1000px] h-[800px]" src={place.image} alt="" />
+        <img className="xl:w-[1000px] xl:h-[800px]" src={place.image} alt="" />
         </div>
 
         <div className="flex flex-col p-8 gap-2 justify-center">
         <p className="text-3xl font-bold">{place.country}</p>
         <h2 className="text-lg font-semibold">{place.name}</h2>
         
-        <p className="text-gray-400 w-[450px]"><span className="text-lg font-bold text-white">Description:</span> {place.short_description}</p>
+        <p className="text-gray-400 xl:w-[450px]"><span className="text-lg font-bold text-white">Description:</span> {place.short_description}</p>
         <p className="text-gray-400"><span className="text-[16px] font-bold text-white">Placed At: </span>{place.location}</p>
         <p className="text-gray-400"><span className="text-[16px] font-bold text-white">Only At: </span>{place.average_cost}$</p>
         <p className="text-gray-400"><span className="text-[16px] font-bold text-white">Seasonality: </span>{place.seasonality}</p>

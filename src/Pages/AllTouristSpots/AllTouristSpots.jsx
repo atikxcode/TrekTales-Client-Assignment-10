@@ -47,7 +47,7 @@ const AllTouristSpots = () => {
 
       <div className="py-16  mx-auto container -z-20">
       <div className="text-white flex gap-8 flex-col items-center mx-auto container">
-      <h2 className="text-5xl font-bold">Explore Our Top Tourist Spots</h2>
+      <h2 className="xl:text-5xl font-bold">Explore Our Top Tourist Spots</h2>
       <p className="text-[16px] text-gray-300 text-center w-1/2">Embark on an unforgettable journey through our curated selection of must-visit destinations. From iconic landmarks to hidden gems, discover the beauty and charm of each location, and create lasting memories with every adventure. Start planning your next getaway today!</p>
       
       <div className="mb-10 flex flex-col items-center">
@@ -69,7 +69,7 @@ const AllTouristSpots = () => {
       </div>
 
 
-      <div className="grid grid-cols-3 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-16">
       {
         touristSpots.map(touristSpot => <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" className="" key={touristSpot._id}>
           <div className=" hover:scale-110 duration-1000 transition-all bg-[#1b1b1b]">

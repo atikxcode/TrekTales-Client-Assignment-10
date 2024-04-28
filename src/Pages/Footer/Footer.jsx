@@ -19,7 +19,7 @@ const Footer = () => {
     </div>
   </nav> 
   <aside>
-    <p>Copyright © 2024 - All right reserved by Elite Shore Escape</p>
+    <p>Copyright © 2024 - All right reserved by TrekTales</p>
   </aside>
 </footer>
   );

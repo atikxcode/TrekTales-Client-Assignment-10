@@ -19,9 +19,9 @@ const CountryBasedFiltered = ({spot}) => {
     <div className="my-16 ">
 
      <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-     <div className="flex flex-col gap-6 bg-[#1b1b1b] w-[450px] h-auto hover:scale-105 duration-1000 transition-all">
-        <div>
-        <img className="w-[450px] h-[350px]" src={image} alt="" />
+     <div className="flex flex-col gap-6 bg-[#1b1b1b] xl:w-[450px] h-auto hover:scale-105 duration-1000 transition-all">
+        <div className="">
+        <img className="w-full h-[350px]" src={image} alt="" />
         </div>
 
         <div className="flex justify-between">

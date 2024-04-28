@@ -43,7 +43,7 @@ const FilteredTouristSpot = () => {
     <div className="bg-[#000000]">
        <Navbar></Navbar>
        <div className="my-10 mx-auto container">
-       <div className="grid grid-cols-3 gap-4">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
        {
       filteredSpot?.map(spot => <CountryBasedFiltered key={spot._id} spot={spot}></CountryBasedFiltered>)
         }
