@@ -18,7 +18,8 @@ const CountryBasedFiltered = ({spot}) => {
     <div className="bg-[#000000]">
     <div className="my-16 ">
 
-      <div className="flex flex-col gap-6 bg-[#1b1b1b] w-[450px] h-auto hover:scale-105 transition-all" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+     <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+     <div className="flex flex-col gap-6 bg-[#1b1b1b] w-[450px] h-auto hover:scale-105 duration-1000 transition-all">
         <div>
         <img className="w-[450px] h-[350px]" src={image} alt="" />
         </div>
@@ -41,6 +42,7 @@ const CountryBasedFiltered = ({spot}) => {
 
         </div>
       </div>
+     </div>
 
     </div>
     

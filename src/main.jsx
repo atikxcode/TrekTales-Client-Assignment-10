@@ -18,7 +18,7 @@ import AllTouristSpots from './Pages/AllTouristSpots/AllTouristSpots';
 import AddTouristsSpot from './Pages/AddTouristsSpot/AddTouristsSpot';
 import ViewDetails from './Pages/ViewDetails/ViewDetails';
 import FilteredTouristSpot from './Pages/FilteredTouristSpot/FilteredTouristSpot';
-import FilteredSpot from './Pages/FilteredTouristSpot/FilteredSpot';
+
 import Country from './Pages/Countries/Country';
 import PrivateRoute from './Pages/PrivateRoutes/PrivateRoute';
 import PrivateRoute2 from './Pages/PrivateRoutes/PrivateRoute2';
@@ -82,11 +82,7 @@ const router = createBrowserRouter([
         
         
       },
-      {
-        path: '/filteredspot',
-        element: <FilteredSpot></FilteredSpot>,
-        
-      },
+      
       {
         path: '/mylist',
         element: <PrivateRoute3><MyList></MyList></PrivateRoute3>,

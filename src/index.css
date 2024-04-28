@@ -2,3 +2,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+:root[data-theme="dark"] {
+  background-color: #000000;
+  color:#FFF;
+ .text-toggle{
+  color:#FFF;
+ }
+ .text-toggle2{
+  color:#FFF;
+ }
+ .text-toggle3{
+  color:#D1D5DB;
+ }
+
+ 
+
+
+}
+
+
+:root[data-theme="light"] {
+  background-color:#FFF;
+  .text-toggle{
+    color:#000000;
+   }
+  .text-toggle2{
+    color:#FFF;
+   }
+   .text-toggle3{
+    color:black;
+   }
+  
+}

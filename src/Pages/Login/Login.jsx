@@ -10,6 +10,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import 'aos/dist/aos.css'
 import Aos from "aos";
+import { Fade } from "react-awesome-reveal";
 
 const Login = () => {
 
@@ -73,11 +74,13 @@ const Login = () => {
   }
 
 
+ 
+
 
   return (
     
     <div className=" bg-[#000000]">
-      <div className=" mb-10" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+      <div className=" pb-10" >
         <Navbar></Navbar>
       <Helmet>
       <meta charSet="utf-8" />
@@ -88,10 +91,12 @@ const Login = () => {
       <div className="">
         
       <div className="text-white">
-      <h2 className="my-10 text-center text-white text-[35px] font-semibold">Login your account</h2>
-      
+      <Fade direction="top" ><h2 className="my-10 text-center text-white text-[35px] font-semibold">Login your account</h2></Fade>
+     
+      <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800">
 
-  <form className="md:3/4 lg:w-1/2 mx-auto" onSubmit={handleLogin}>
+
+      <form className="md:3/4 lg:w-1/2 mx-auto" onSubmit={handleLogin}>
   <div className="form-control">
     <label className="label">
       <span className="text-white text-[20px] font-semibold">Email address</span>
@@ -127,7 +132,20 @@ const Login = () => {
 
       </div>
       
- </div>
+      </div>
+      </div>
+
+  
+
+
+
+
+
+
+
+
+
+
      
      <div className="">
      <Footer></Footer>

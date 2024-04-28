@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'aos/dist/aos.css'
 import Aos from "aos";
 import { Helmet } from "react-helmet";
-
+import 'animate.css';
 
 
 
@@ -79,10 +79,10 @@ const AddTouristsSpot = () => {
 
       </Helmet>
 
-      <Navbar></Navbar>
+      <div className=""><Navbar></Navbar></div>
 
 
-      <div className="py-16" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+      <div className="py-24 md:py-24 lg:py-24 xl:py-16">
     <h2 className="my-10 text-center text-white text-[35px] font-semibold">Add Your Tourist Spot</h2>
     
 

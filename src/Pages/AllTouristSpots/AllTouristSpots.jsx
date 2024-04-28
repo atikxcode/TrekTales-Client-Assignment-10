@@ -6,7 +6,11 @@ import Footer from "../Footer/Footer";
 import { Helmet } from "react-helmet";
 
 
+
 const AllTouristSpots = () => {
+
+
+  
 
   useEffect(() => {
     Aos.init();
@@ -33,14 +37,15 @@ const AllTouristSpots = () => {
 
 
   return (
-    <div className="bg-[#000000] " >
+    <div className="bg-[#000000]" >
       <Helmet>
       <meta charSet="utf-8" />
       <title>All Tourist Spot - TrekTales</title>
 
       </Helmet>
-      <Navbar></Navbar>
-      <div className="py-16  mx-auto container">
+      <div className="z-50"><Navbar></Navbar></div>
+
+      <div className="py-16  mx-auto container -z-20">
       <div className="text-white flex gap-8 flex-col items-center mx-auto container">
       <h2 className="text-5xl font-bold">Explore Our Top Tourist Spots</h2>
       <p className="text-[16px] text-gray-300 text-center w-1/2">Embark on an unforgettable journey through our curated selection of must-visit destinations. From iconic landmarks to hidden gems, discover the beauty and charm of each location, and create lasting memories with every adventure. Start planning your next getaway today!</p>
@@ -67,7 +72,7 @@ const AllTouristSpots = () => {
       <div className="grid grid-cols-3 gap-16">
       {
         touristSpots.map(touristSpot => <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" className="" key={touristSpot._id}>
-          <div className=" hover:scale-110 transition-all bg-[#1b1b1b]">
+          <div className=" hover:scale-110 duration-1000 transition-all bg-[#1b1b1b]">
           <img className="w-[450px] h-[350px] " src={touristSpot.image} alt="" />
          
          <div className="flex justify-between">

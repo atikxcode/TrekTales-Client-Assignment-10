@@ -38,3 +38,24 @@ body {
   height: 370px;
   object-fit: cover;
 }
+
+
+@media (max-width: 640px) {
+  .swiper-slide img {
+    height: 230px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Media query for screen width 768px */
+@media (min-width: 641px) and (max-width: 768px) {
+  .swiper-slide img {
+    height: 300px; /* Adjust height for medium-sized screens */
+  }
+}
+
+/* Media query for screen width 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .swiper-slide img {
+    height: 350px; /* Adjust height for larger screens */
+  }
+}

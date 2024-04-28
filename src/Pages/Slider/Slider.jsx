@@ -45,8 +45,20 @@ const Slider = () => {
   <div className=' ' >
     <div className='container mx-auto p-4' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
     <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30
+          },
+        }}
         pagination={{
           clickable: true,
         }}
