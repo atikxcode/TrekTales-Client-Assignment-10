@@ -59,6 +59,11 @@ const AuthProvider = ({children}) => {
     }
   },[])
 
+
+
+
+
+
   const authInfo = {
     user,
     createUser,
@@ -68,6 +73,7 @@ const AuthProvider = ({children}) => {
     handleGithubSignIn,
     updateUser,
     loading,
+   
 
   }
 

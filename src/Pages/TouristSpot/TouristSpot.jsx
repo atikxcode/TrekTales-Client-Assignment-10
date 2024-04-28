@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import 'aos/dist/aos.css'
 import Aos from "aos";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const TouristSpot = () => {
+
+
 
   useEffect(() => {
     Aos.init();

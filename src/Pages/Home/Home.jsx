@@ -33,14 +33,14 @@ const Home = () => {
       
       <div className='relative h-full w-full' style={{backgroundImage:`url(${homeimg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
       
-      <div className=' w-full top-0 flex items-center'>
+      <div className='absolute w-full top-0 items-center'>
       
-      <div className='flex-1'><NavBar></NavBar></div>
+      <NavBar></NavBar>
       
     
       
       </div>
-        <div  className=' pl-[200px] pt-6 pb-10 pr-10 text-white flex flex-col ' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+        <div  className='absolute top-[15%] pl-[200px] pt-6 pb-10 pr-10 text-white flex flex-col ' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
         <h2 className='text-2xl font-medium'>Welcome To TrekTales</h2>
         <h2 className='text-[55px] w-[280px] font-bold leading-[80px] mb-4 mt-4'>Explore The world</h2>
         <p className='text-[16px] font-medium w-[500px]'>Live the trips exploring the world, discover paradises, islands, mountains and much more, get your trip now.</p>

@@ -8,11 +8,12 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
 
+
 const UpdateTourCard = () => {
 
   const card = useLoaderData();
 
-  const {name, image, location, short_description, average_cost, travel_time, total_visitors_per_year, seasonality, country} = card;
+  const {_id,name, image, location, short_description, average_cost, travel_time, total_visitors_per_year, seasonality, country} = card;
 
   useEffect(() => {
     Aos.init();
@@ -22,6 +23,8 @@ const UpdateTourCard = () => {
   const notify = () => toast("Updated The Tourist Spot Successfully");
 
   const {user} = useContext(AuthContext)
+
+  
 
  
   const handleUpdate = e => {
@@ -40,13 +43,12 @@ const UpdateTourCard = () => {
     const travel_time = form.time.value;
     const visit = form.visit.value;
     const total_visitors_per_year = parseInt(visit);
-    const user_email = form.email.value;
-    const user_name = form.name.value;
+   
 
-    const updateTourSpot = {image, name, country, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year, user_email, user_name};
+    const updateTourSpot = {image, name, country, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year};
     console.log(updateTourSpot)
 
-    fetch('http://localhost:5000/touristspot', {
+    fetch(`http://localhost:5000/touristspot/${_id}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json'
@@ -58,6 +60,7 @@ const UpdateTourCard = () => {
       console.log(data)
       if(data.modifiedCount > 0){
          notify();
+         
       }
       
       form.reset();
@@ -161,19 +164,7 @@ const UpdateTourCard = () => {
   <input type="number" placeholder="Enter total approximated visit per year" name="visit" defaultValue={total_visitors_per_year}  className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
 </div>
 
-<div className="form-control">
-  <label className="label">
-    <span className="text-white  text-[20px] font-semibold">User Email</span>
-  </label>
-  <input type="email" defaultValue={user ? user.email : ''} placeholder="Enter your email address" name="email" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
-</div>
 
-<div className="form-control">
-  <label className="label">
-    <span className="text-white  text-[20px] font-semibold">User Name</span>
-  </label>
-  <input type="text" defaultValue={user ? user.displayName : ''} placeholder="Enter your Name" name="name" className="input bg-inherit text-white hover:border-white mb-4 border-[1px] border-gray-400" required />
-</div>
 
 <div className="form-control mt-6">
   <button className="p-3 rounded-xl  text-white text-xl font-semibold bg-gray-400 opacity-70 hover:text-black hover:bg-white duration-700 ">Add</button>
