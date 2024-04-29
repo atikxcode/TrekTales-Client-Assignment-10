@@ -12,6 +12,7 @@ import toggleTheme from '../DarkOrLight/darkOrLight';
 import { Link } from 'react-router-dom';
 import Country from '../Countries/Country';
 import { Helmet } from 'react-helmet';
+import Happiness from '../Happiness/Happiness';
 
 const Home = () => {
 
@@ -63,10 +64,19 @@ const Home = () => {
       <Country></Country>
 
       
-
-      <Footer></Footer>
+      <Happiness></Happiness>
+      
+      
+     
+     <Footer></Footer>
+     
+      
       
     </div>
+
+    
+    
+    
 
     </div>
   );
