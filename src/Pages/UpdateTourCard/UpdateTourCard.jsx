@@ -114,7 +114,7 @@ const UpdateTourCard = () => {
     <option className="bg-[#000000]" value='Italy'>Italy</option>
     <option className="bg-[#000000]" value='Spain'>Spain</option>
     <option className="bg-[#000000]" value='England'>England</option>
-    <option className="bg-[#000000]" value='Netherlands'>Netherlands</option>
+    <option className="bg-[#000000]" value='Netherland'>Netherland</option>
     <option className="bg-[#000000]" value='Switzerland'>Switzerland</option>
   </select>
 

@@ -27,6 +27,8 @@ import CountryBasedFiltered from './Pages/FilteredTouristSpot/CountryBasedFilter
 import PrivateRoute3 from './Pages/PrivateRoutes/PrivateRoute3';
 import UpdateTourCard from './Pages/UpdateTourCard/UpdateTourCard';
 import Happiness from './Pages/Happiness/Happiness';
+import About from './Pages/About/About';
+
 
 
 
@@ -106,7 +108,13 @@ const router = createBrowserRouter([
       {
         path: '/happiness',
         element: <Happiness></Happiness>
-      }
+      },
+     
+      {
+        path: '/about',
+        element: <About></About>
+      },
+     
       
       
     ]

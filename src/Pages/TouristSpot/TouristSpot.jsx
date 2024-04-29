@@ -27,7 +27,7 @@ useEffect(() => {
     <div className="py-16" >
       <div className=" flex gap-8 flex-col items-center mx-auto container">
       <h2 className="text-2xl lg:text-4xl xl:text-5xl text-toggle font-bold">Iconic Landmarks</h2>
-      <p className="text-[16px] text-toggle3">Journey Through Our Most Visited Spots</p>
+      <p className="text-[16px] text-toggle3 mb-10">Journey Through Our Most Visited Spots</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-16">
       {
         touristSpots.map(touristSpot => <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" className="" key={touristSpot._id}>

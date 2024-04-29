@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import Country from '../Countries/Country';
 import { Helmet } from 'react-helmet';
 import Happiness from '../Happiness/Happiness';
+import About from '../About/About';
 
 const Home = () => {
 
@@ -65,6 +66,9 @@ const Home = () => {
 
       
       <Happiness></Happiness>
+
+
+      <About></About>
       
       
      

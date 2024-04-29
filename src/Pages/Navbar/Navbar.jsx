@@ -52,7 +52,7 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <h2 className="font-bold xl:text-2xl text-orange-400 animate__animated animate__backInLeft">{typeEffect}</h2>
+    <h2 className="font-bold  md:text-2xl lg:text-2xl xl:text-2xl text-orange-400 animate__animated animate__backInLeft">{typeEffect}</h2>
   </div>
   <div className="navbar-center hidden lg:flex ">
   <ul className=" menu menu-horizontal px-1 font-semibold text-white ">
