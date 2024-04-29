@@ -51,7 +51,7 @@ useEffect(() => {
     <div className="bg-[#000000] " >
     <Helmet>
     <meta charSet="utf-8" />
-    <title>All Tourist Spot - TrekTales</title>
+    <title>My List - TrekTales</title>
 
     </Helmet>
     <Navbar></Navbar>

@@ -4,6 +4,7 @@ import 'aos/dist/aos.css'
 import Aos from "aos";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const CountryBasedFiltered = ({spot}) => {
 
@@ -16,6 +17,11 @@ const CountryBasedFiltered = ({spot}) => {
 
   return (
     <div className="bg-[#000000]">
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>Country Based Tourist Spot - TrekTales</title>
+
+      </Helmet>
     <div className="my-16 ">
 
      <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
