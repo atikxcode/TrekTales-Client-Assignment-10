@@ -19,7 +19,7 @@ const AllTouristSpots = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/touristspot')
+    fetch('https://assignment-10-server-zeta-smoky.vercel.app/touristspot')
     .then(res => res.json())
     .then(data => {
       let sortedData = [...data].sort((a,b) => 
@@ -47,7 +47,7 @@ const AllTouristSpots = () => {
 
       <div className="py-16  mx-auto container -z-20">
       <div className="text-white flex gap-8 flex-col items-center mx-auto container">
-      <h2 className="xl:text-5xl font-bold">Explore Our Top Tourist Spots</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">Explore Our Top Tourist Spots</h2>
       <p className="text-[16px] text-gray-300 text-center w-1/2">Embark on an unforgettable journey through our curated selection of must-visit destinations. From iconic landmarks to hidden gems, discover the beauty and charm of each location, and create lasting memories with every adventure. Start planning your next getaway today!</p>
       
       <div className="mb-10 flex flex-col items-center">

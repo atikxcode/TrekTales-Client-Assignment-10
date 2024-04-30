@@ -22,7 +22,7 @@ const FilteredTouristSpot = () => {
   const [allSpot, setAllSpot] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/touristspot')
+    fetch('https://assignment-10-server-zeta-smoky.vercel.app/touristspot')
     .then(res => res.json())
     .then(data => {
       setAllSpot(data);

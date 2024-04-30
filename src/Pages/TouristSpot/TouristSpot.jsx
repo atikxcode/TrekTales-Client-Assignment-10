@@ -15,7 +15,7 @@ const TouristSpot = () => {
   const [touristSpots, setTouristSpots] = useState([]);
 
 useEffect(() => {
-  fetch('http://localhost:5000/touristspot')
+  fetch('https://assignment-10-server-zeta-smoky.vercel.app/touristspot')
   .then(res => res.json())
   .then(data => {
    console.log(data)
@@ -26,7 +26,7 @@ useEffect(() => {
   return (
     <div className="py-16" >
       <div className=" flex gap-8 flex-col items-center mx-auto container">
-      <h2 className="text-2xl lg:text-4xl xl:text-5xl text-toggle font-bold">Iconic Landmarks</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-toggle font-bold">Iconic Landmarks</h2>
       <p className="text-[16px] text-toggle3 mb-10">Journey Through Our Most Visited Spots</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-16">
       {

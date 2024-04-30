@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+
 import Footer from "../Footer/Footer";
 import { Helmet } from "react-helmet";
+import Navbar from "../Navbar/Navbar";
 
 
 const ViewDetails = () => {
@@ -13,13 +14,14 @@ const ViewDetails = () => {
 
   return (
     <div className="bg-[#000000] text-white ">
+      <Navbar></Navbar>
       <Helmet>
       <meta charSet="utf-8" />
       <title>View Details - TrekTales</title>
 
       </Helmet>
-      <Navbar></Navbar>
-      <div className="py-[100px] md:py-[300px] lg:py-[300px] xl:py-[300px] container mx-auto">
+      
+      <div className="py-[100px] md:py-[300px] lg:py-[200px] xl:py-[200px] container mx-auto">
       
 
       <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row bg-[#1b1b1b] ">

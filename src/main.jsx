@@ -70,7 +70,7 @@ const router = createBrowserRouter([
       {
         path: '/viewdetails/:id',
         element: <PrivateRoute2><ViewDetails></ViewDetails></PrivateRoute2>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristspot/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-zeta-smoky.vercel.app/touristspot/${params.id}`)
       },
       
       {
@@ -102,7 +102,7 @@ const router = createBrowserRouter([
       {
         path: '/updatetourcard/:id',
         element: <UpdateTourCard></UpdateTourCard>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristspot/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-zeta-smoky.vercel.app/touristspot/${params.id}`)
       },
 
       {

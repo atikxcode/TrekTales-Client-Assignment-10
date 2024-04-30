@@ -48,7 +48,7 @@ const UpdateTourCard = () => {
     const updateTourSpot = {image, name, country, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year};
     console.log(updateTourSpot)
 
-    fetch(`http://localhost:5000/touristspot/${_id}`, {
+    fetch(`https://assignment-10-server-zeta-smoky.vercel.app/touristspot/${_id}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json'

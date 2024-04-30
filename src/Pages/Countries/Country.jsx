@@ -10,7 +10,7 @@ const Country = () => {
   console.log('Location state:', location.state)
 
   useEffect(() => {
-    fetch('http://localhost:5000/country')
+    fetch('https://assignment-10-server-zeta-smoky.vercel.app/country')
     .then(res => res.json())
     .then(data => {
       setCountries(data)

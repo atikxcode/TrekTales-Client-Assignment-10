@@ -29,7 +29,7 @@ useEffect(() => {
   if(!user || !user.email){
     return;
   }
- fetch('http://localhost:5000/touristspot')
+ fetch('https://assignment-10-server-zeta-smoky.vercel.app/touristspot')
  .then(res => res.json())
  .then(data => {
   const filteredList = data?.filter(item => item?.user_email === user?.email);

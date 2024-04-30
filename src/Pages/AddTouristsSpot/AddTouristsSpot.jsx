@@ -49,7 +49,7 @@ const AddTouristsSpot = () => {
     const newTourSpot = {image, name, country, location, short_description, average_cost, seasonality, travel_time, total_visitors_per_year, user_email, user_name};
     console.log(newTourSpot)
 
-    fetch('http://localhost:5000/touristspot', {
+    fetch('https://assignment-10-server-zeta-smoky.vercel.app/touristspot', {
       method: "POST",
       headers: {
         'content-type': 'application/json'
@@ -61,6 +61,7 @@ const AddTouristsSpot = () => {
       console.log(data)
       if(data.insertedId){
          notify();
+         
       }
       
       form.reset();

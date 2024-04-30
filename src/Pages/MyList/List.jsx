@@ -32,7 +32,7 @@ const List = ({lists, setLists}) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // If user confirms deletion, send DELETE request to server
-        fetch(`http://localhost:5000/touristspot/${id}`, {
+        fetch(`https://assignment-10-server-zeta-smoky.vercel.app/touristspot/${id}`, {
           method: 'DELETE',
         })
         .then(res => res.json())
